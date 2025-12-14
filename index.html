@@ -37,8 +37,9 @@
       padding:14px 16px; border:1px solid var(--line); border-radius:999px;
       background:rgba(17,24,39,.55); backdrop-filter: blur(10px);
       position:sticky; top:16px; z-index:10;
+      gap:14px;
     }
-    .brand{display:flex; gap:10px; align-items:center; font-weight:800; letter-spacing:.2px}
+    .brand{display:flex; gap:10px; align-items:center; font-weight:800; letter-spacing:.2px; white-space:nowrap}
     .logo{
       width:34px; height:34px; border-radius:10px;
       object-fit:contain;
@@ -46,10 +47,13 @@
       border:1px solid var(--line);
       padding:6px;
     }
-    .navlinks{display:flex; gap:14px; align-items:center; font-size:14px; color:var(--muted)}
-    .navlinks a{padding:10px 10px; border-radius:999px}
+    .navlinks{
+      display:flex; gap:10px; align-items:center; font-size:14px; color:var(--muted);
+      flex:1; justify-content:center; flex-wrap:wrap;
+    }
+    .navlinks a{padding:10px 10px; border-radius:999px; white-space:nowrap}
     .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-    .cta{display:flex; gap:10px; align-items:center}
+    .cta{display:flex; gap:10px; align-items:center; white-space:nowrap}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
       padding:10px 14px; border-radius:999px; font-weight:700; font-size:14px;
@@ -60,7 +64,10 @@
     .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.18)}
     .btn.primary{border-color:rgba(56,189,248,.35); background:linear-gradient(135deg, rgba(56,189,248,.18), rgba(167,139,250,.14))}
     .hero{padding:56px 6px 10px; display:grid; grid-template-columns: 1.15fr .85fr; gap:18px; align-items:start}
-    @media (max-width: 920px){ .hero{grid-template-columns:1fr; padding-top:34px} .navlinks{display:none} }
+    @media (max-width: 920px){
+      .hero{grid-template-columns:1fr; padding-top:34px}
+      .navlinks{display:none}
+    }
     .kicker{
       display:inline-flex; gap:10px; align-items:center; color:var(--muted); font-size:13px;
       border:1px solid var(--line); background:rgba(17,24,39,.55); padding:8px 12px; border-radius:999px;
@@ -103,20 +110,23 @@
 
 <body>
   <div class="wrap">
+
+    <!-- NAV -->
     <div class="nav">
       <div class="brand">
         <img class="logo" src="logo.png" alt="Ore Media logo" />
         <span>Ore Media</span>
       </div>
 
+      <!-- Email moved into nav links -->
       <div class="navlinks">
         <a href="#work">Recent work</a>
+        <a href="mailto:cooper@minersmedia.com">cooper@minersmedia.com</a>
         <a href="#book">Booking</a>
         <a href="#linkedin">LinkedIn</a>
       </div>
 
       <div class="cta">
-        <a class="btn" href="mailto:cooper@minersmedia.com">Email</a>
         <a class="btn primary" href="https://tidycal.com/cooper2/bookinterview" target="_blank" rel="noopener">Book a CEO call</a>
       </div>
     </div>
@@ -174,8 +184,10 @@
         </div>
 
         <div class="card">
-          <h3>Want yours next?</h3>
-          <p>Book a quick discussion and we’ll map the best angles around your next catalyst.</p>
+          <h3>CEO Interview Book</h3>
+          <p>
+            Book a 15-minute interview to promote your company to a growing audience of retail investors focused on junior mining.
+          </p>
           <div style="margin-top:12px">
             <a class="btn" href="#book">Open booking</a>
           </div>
@@ -188,11 +200,11 @@
       <h2>Booking</h2>
       <p class="sub">Choose a time that suits. This booking form is embedded below.</p>
 
-      <!-- TidyCal embed (single embed per page) -->
+      <!-- TidyCal embed -->
       <div id="tidycal-embed" data-path="cooper2/bookinterview"></div>
 
-      <div style="margin-top:12px" class="small" style="color:var(--muted)">
-        If the embed doesn’t load, use the direct link:
+      <div style="margin-top:12px" class="small">
+        <span style="color:var(--muted)">If the embed doesn’t load, use the direct link: </span>
         <a href="https://tidycal.com/cooper2/bookinterview" target="_blank" rel="noopener" style="text-decoration:underline">tidycal.com/cooper2/bookinterview</a>
       </div>
     </div>
@@ -222,3 +234,4 @@
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
