@@ -49,12 +49,12 @@
       gap:14px;
     }
     .brand img{
-      height:44px;
+      height:40px;
       width:auto;
       object-fit:contain;
     }
     .navlinks{
-      display:flex; gap:10px; align-items:center;
+      display:flex; gap:12px; align-items:center;
       font-size:14px; color:var(--muted);
       flex:1; justify-content:center;
     }
@@ -76,23 +76,31 @@
 
     /* HERO */
     .hero{
-      padding:70px 6px 10px;
+      padding:72px 6px 10px;
       display:grid;
       grid-template-columns: 1.1fr .9fr;
-      gap:22px;
+      gap:26px;
       align-items:start;
     }
 
-    .hero-logo{
-      width:100%;
-      max-width:420px;
-      margin-bottom:18px;
+    h1{
+      font-size:42px;
+      line-height:1.1;
+      margin:0 0 16px;
+    }
+    .lead{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+      max-width:620px;
     }
 
-    h1{font-size:42px; line-height:1.1; margin:0 0 14px}
-    .lead{color:var(--muted); font-size:16px; line-height:1.6}
-
-    .heroBtns{display:flex; gap:12px; flex-wrap:wrap; margin-top:22px}
+    .heroBtns{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:24px;
+    }
 
     .panel{
       border:1px solid var(--line);
@@ -102,7 +110,7 @@
       padding:20px;
     }
 
-    .section{padding:36px 6px 0}
+    .section{padding:40px 6px 0}
     .section h2{font-size:20px; margin-bottom:12px}
     .grid{display:grid; gap:14px}
     .grid.cols2{grid-template-columns:repeat(2,1fr)}
@@ -134,7 +142,6 @@
       .hero{grid-template-columns:1fr}
       .navlinks{display:none}
       h1{font-size:36px}
-      .hero-logo{max-width:300px}
     }
   </style>
 </head>
@@ -162,9 +169,8 @@
   <!-- HERO -->
   <div class="hero">
     <div>
-      <img class="hero-logo" src="websitelogo.png" alt="Ore Media">
-
       <h1>Book CEO discussions that retail investors actually watch.</h1>
+
       <p class="lead">
         Ore Media helps junior mining companies tell the story clearly — the asset, the catalyst,
         and the plan — through clean, recorded CEO interviews designed for investor attention and sharing.
@@ -177,7 +183,8 @@
     </div>
 
     <div class="panel">
-      <img src="Aragon-Headshot-Cooper-Ginn-87.jpg" style="width:56px;height:56px;border-radius:50%;margin-bottom:14px">
+      <img src="Aragon-Headshot-Cooper-Ginn-87.jpg"
+           style="width:56px;height:56px;border-radius:50%;margin-bottom:14px">
       <p style="margin:0;color:var(--muted)">
         Recorded interviews • Investor-focused • Junior mining specialists
       </p>
@@ -190,11 +197,15 @@
     <div class="grid cols2">
       <div class="card">
         <h3>Investor Presentation — YouTube</h3>
-        <a class="btn" href="https://www.youtube.com/watch?v=SvceQmTNmes" target="_blank">Watch on YouTube</a>
+        <a class="btn" href="https://www.youtube.com/watch?v=SvceQmTNmes" target="_blank">
+          Watch on YouTube
+        </a>
       </div>
       <div class="card">
         <h3>Recorded CEO Interview</h3>
-        <p class="lead">15-minute interview promoted to a growing retail mining audience.</p>
+        <p class="lead">
+          15-minute interview promoted to a growing retail mining audience.
+        </p>
         <a class="btn" href="#book">Open booking</a>
       </div>
     </div>
@@ -206,7 +217,9 @@
     <div id="tidycal-embed" data-path="oremedia/booking"></div>
     <p class="lead">
       Or book directly:
-      <a href="https://tidycal.com/oremedia/booking" target="_blank">tidycal.com/oremedia/booking</a>
+      <a href="https://tidycal.com/oremedia/booking" target="_blank">
+        tidycal.com/oremedia/booking
+      </a>
     </p>
   </div>
 
