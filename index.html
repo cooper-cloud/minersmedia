@@ -1,0 +1,263 @@
+index.html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Miners Media — Investor Content for Junior Mining Companies</title>
+  <meta name="description" content="Miners Media creates investor presentations and CEO interviews to help junior mining companies reach retail investors." />
+  <meta name="theme-color" content="#0B0F19" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Miners Media" />
+  <meta property="og:description" content="Investor presentations, CEO interviews, and distribution for junior mining companies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://minersmedia.com" />
+
+  <style>
+    :root{
+      --bg:#0B0F19; --card:#111827; --muted:#94A3B8; --text:#E5E7EB;
+      --line:rgba(255,255,255,.10); --accent:#38BDF8; --accent2:#A78BFA;
+      --shadow: 0 18px 60px rgba(0,0,0,.45);
+      --radius:18px;
+      --max: 1040px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1100px 700px at 15% 10%, rgba(56,189,248,.18), transparent 60%),
+                               radial-gradient(1100px 700px at 80% 30%, rgba(167,139,250,.14), transparent 55%),
+                               var(--bg);
+              color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 64px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 16px; border:1px solid var(--line); border-radius:999px;
+      background:rgba(17,24,39,.55); backdrop-filter: blur(10px);
+      position:sticky; top:16px; z-index:10;
+    }
+    .brand{display:flex; gap:10px; align-items:center; font-weight:700; letter-spacing:.2px}
+    .dot{width:10px;height:10px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    .navlinks{display:flex; gap:14px; align-items:center; font-size:14px; color:var(--muted)}
+    .navlinks a{padding:10px 10px; border-radius:999px}
+    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .cta{display:flex; gap:10px; align-items:center}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px; border-radius:999px; font-weight:650; font-size:14px;
+      border:1px solid var(--line); background:rgba(255,255,255,.05);
+      transition:transform .12s ease, background .12s ease, border-color .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-1px); background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.18)}
+    .btn.primary{border-color:rgba(56,189,248,.35); background:linear-gradient(135deg, rgba(56,189,248,.18), rgba(167,139,250,.14))}
+    .hero{padding:56px 6px 18px; display:grid; grid-template-columns: 1.1fr .9fr; gap:18px; align-items:start}
+    @media (max-width: 920px){ .hero{grid-template-columns:1fr; padding-top:34px} .navlinks{display:none} }
+    .kicker{display:inline-flex; gap:10px; align-items:center; color:var(--muted); font-size:13px;
+            border:1px solid var(--line); background:rgba(17,24,39,.55); padding:8px 12px; border-radius:999px;}
+    .kicker b{color:var(--text)}
+    h1{font-size:44px; line-height:1.05; margin:14px 0 12px}
+    @media (max-width: 520px){ h1{font-size:36px} }
+    .lead{color:var(--muted); font-size:16px; line-height:1.6; max-width:56ch}
+    .heroBtns{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+    .panel{
+      border:1px solid var(--line); background:rgba(17,24,39,.65);
+      border-radius:var(--radius); box-shadow:var(--shadow); padding:18px;
+    }
+    .grid{display:grid; gap:12px}
+    .grid.cols3{grid-template-columns:repeat(3, 1fr)}
+    .grid.cols2{grid-template-columns:repeat(2, 1fr)}
+    @media (max-width: 920px){ .grid.cols3, .grid.cols2{grid-template-columns:1fr} }
+    .card{border:1px solid var(--line); background:rgba(255,255,255,.03); border-radius:16px; padding:16px}
+    .card h3{margin:0 0 6px; font-size:16px}
+    .card p{margin:0; color:var(--muted); line-height:1.55; font-size:14px}
+    .section{padding:26px 6px 0}
+    .section h2{font-size:20px; margin:0 0 10px}
+    .section .sub{color:var(--muted); margin:0 0 14px; line-height:1.6}
+    .list{display:grid; gap:10px; margin:0; padding:0; list-style:none}
+    .li{display:flex; gap:12px; align-items:flex-start; padding:12px; border:1px solid var(--line);
+        border-radius:14px; background:rgba(255,255,255,.03)}
+    .tick{width:18px;height:18px;border-radius:6px; background:rgba(56,189,248,.18); border:1px solid rgba(56,189,248,.28)}
+    .muted{color:var(--muted)}
+    .footer{margin-top:40px; padding:20px 6px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
+    .pill{display:inline-flex; gap:10px; align-items:center; padding:10px 12px; border-radius:999px;
+          border:1px solid var(--line); background:rgba(255,255,255,.03); color:var(--muted); font-size:13px}
+    .small{font-size:12px}
+    .divider{height:1px; background:var(--line); margin:14px 0}
+    .price{font-size:22px; font-weight:800; margin:8px 0 2px}
+    .badge{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; font-size:12px;
+           border:1px solid rgba(167,139,250,.28); background:rgba(167,139,250,.12); color:var(--text)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Miners Media</span>
+      </div>
+
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#work">Recent work</a>
+        <a href="#book">Book</a>
+      </div>
+
+      <div class="cta">
+        <a class="btn" href="mailto:hello@minersmedia.com">Email</a>
+        <a class="btn primary" href="YOUR_BOOKING_LINK_HERE" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <span class="kicker"><b>Investor-grade content</b> for junior mining companies</span>
+        <h1>Clear story. Clean delivery. More retail reach.</h1>
+        <p class="lead">
+          Miners Media produces short investor presentations and CEO interviews that explain the opportunity,
+          the catalysts, and the plan — in a format retail investors actually watch.
+        </p>
+        <div class="heroBtns">
+          <a class="btn primary" href="YOUR_BOOKING_LINK_HERE" target="_blank" rel="noopener">Book a 15-min chat</a>
+          <a class="btn" href="#packages">View packages</a>
+          <a class="btn" href="#work">See recent work</a>
+        </div>
+
+        <div class="section">
+          <div class="pill">⚡ Fast turnaround <span class="muted">•</span> 🎙️ Flexible formats <span class="muted">•</span> 📣 Distribution support</div>
+        </div>
+      </div>
+
+      <div class="panel grid">
+        <div class="card">
+          <h3>What you get</h3>
+          <p>Professional, concise content designed for shareholders and new investors — without the fluff.</p>
+        </div>
+        <ul class="list">
+          <li class="li"><span class="tick"></span><div><b>Investor Presentation</b><div class="muted small">60–180s script + voiceover + clean visuals</div></div></li>
+          <li class="li"><span class="tick"></span><div><b>CEO Interview</b><div class="muted small">Zoom / phone / audio — highlights included</div></div></li>
+          <li class="li"><span class="tick"></span><div><b>Distribution</b><div class="muted small">YouTube + LinkedIn cutdowns + share pack</div></div></li>
+        </ul>
+        <div class="divider"></div>
+        <div class="muted small">
+          Want to discuss a catalyst or upcoming news flow? Book a quick call — no pressure.
+        </div>
+      </div>
+    </div>
+
+    <div id="services" class="section">
+      <h2>Services</h2>
+      <p class="sub">Simple menu. Corporate tone. Built for investor attention.</p>
+      <div class="grid cols3">
+        <div class="card">
+          <h3>Investor Presentations</h3>
+          <p>Short, structured overview: project, catalysts, strategy, and why it matters now.</p>
+        </div>
+        <div class="card">
+          <h3>CEO Interviews</h3>
+          <p>Recorded Q&A designed to be shareable with shareholders and across socials.</p>
+        </div>
+        <div class="card">
+          <h3>Deck Rewrite</h3>
+          <p>We tighten the narrative so the story reads clean and converts faster.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="packages" class="section">
+      <h2>Packages</h2>
+      <p class="sub">Pick a starting point. We can scale up if the market responds.</p>
+
+      <div class="grid cols3">
+        <div class="card">
+          <span class="badge">Starter</span>
+          <div class="price">Investor Presentation</div>
+          <p class="muted">A clean 60–180s video built around your next catalyst.</p>
+          <div class="divider"></div>
+          <p class="small muted">Includes: script + voiceover + visuals + publish-ready export.</p>
+          <div style="margin-top:12px">
+            <a class="btn primary" href="YOUR_BOOKING_LINK_HERE" target="_blank" rel="noopener">Book to discuss</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge">Growth</span>
+          <div class="price">Presentation + Cutdowns</div>
+          <p class="muted">Add short clips for LinkedIn + Shorts to accelerate subs and reach.</p>
+          <div class="divider"></div>
+          <p class="small muted">Includes: 3–6 short clips + caption pack for reposting.</p>
+          <div style="margin-top:12px">
+            <a class="btn primary" href="YOUR_BOOKING_LINK_HERE" target="_blank" rel="noopener">Book to discuss</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="badge">Premium</span>
+          <div class="price">CEO Interview + Highlights</div>
+          <p class="muted">Interview + best moments packaged for distribution and sharing.</p>
+          <div class="divider"></div>
+          <p class="small muted">Includes: interview edit + 5–10 highlight clips + share assets.</p>
+          <div style="margin-top:12px">
+            <a class="btn primary" href="YOUR_BOOKING_LINK_HERE" target="_blank" rel="noopener">Book to discuss</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="work" class="section">
+      <h2>Recent work</h2>
+      <p class="sub">Add 2–4 links here to build credibility fast.</p>
+
+      <div class="grid cols2">
+        <div class="card">
+          <h3>Investor Presentation — Example 1</h3>
+          <p class="muted">Replace with your YouTube link.</p>
+          <div style="margin-top:12px">
+            <a class="btn" href="#" target="_blank" rel="noopener">Watch</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>CEO Interview — Example 2</h3>
+          <p class="muted">Replace with your YouTube link.</p>
+          <div style="margin-top:12px">
+            <a class="btn" href="#" target="_blank" rel="noopener">Watch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="book" class="section">
+      <h2>Book a discussion</h2>
+      <p class="sub">15 minutes is enough to map a simple content plan around your next catalyst.</p>
+
+      <div class="grid cols2">
+        <div class="card">
+          <h3>Booking</h3>
+          <p class="muted">Choose a time that suits — Zoom, phone, or quick recorded audio.</p>
+          <div style="margin-top:12px">
+            <a class="btn primary" href="YOUR_BOOKING_LINK_HERE" target="_blank" rel="noopener">Open booking page</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Contact</h3>
+          <p class="muted">Prefer email? Send your deck + upcoming news flow and we’ll reply with next steps.</p>
+          <div style="margin-top:12px">
+            <a class="btn" href="mailto:hello@minersmedia.com">hello@minersmedia.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Miners Media</div>
+      <div class="muted">Investor presentations • CEO interviews • Distribution</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
