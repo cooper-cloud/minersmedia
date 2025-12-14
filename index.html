@@ -3,15 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ore Media — CEO Discussions & Investor Reach</title>
-  <meta name="description" content="Ore Media books CEO discussions and creates investor-focused content for junior mining companies to reach retail investors." />
+  <title>Ore Media — Recorded CEO Interviews</title>
+  <meta name="description" content="Ore Media books recorded CEO interviews and produces investor-focused content for junior mining companies." />
   <meta name="theme-color" content="#0B0F19" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Ore Media" />
-  <meta property="og:description" content="CEO discussions and investor-focused content for junior mining companies." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://minersmedia.com" />
 
   <style>
     :root{
@@ -54,280 +48,184 @@
       z-index:10;
       gap:14px;
     }
-    .brand{display:flex; gap:10px; align-items:center; font-weight:850; letter-spacing:.2px; white-space:nowrap}
-    .logo{
-      width:34px; height:34px; border-radius:10px;
+    .brand img{
+      height:44px;
+      width:auto;
       object-fit:contain;
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
-      padding:6px;
     }
     .navlinks{
       display:flex; gap:10px; align-items:center;
       font-size:14px; color:var(--muted);
-      flex:1; justify-content:center; flex-wrap:wrap;
+      flex:1; justify-content:center;
     }
     .navlinks a{
-      padding:10px 10px;
+      padding:10px 12px;
       border-radius:999px;
-      white-space:nowrap;
     }
     .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-    .cta{display:flex; gap:10px; align-items:center; white-space:nowrap}
 
-    /* BUTTONS */
     .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:10px 14px;
+      padding:10px 16px;
       border-radius:999px;
-      font-weight:750;
+      font-weight:700;
       font-size:14px;
       border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      transition:transform .12s ease, background .12s ease, border-color .12s ease;
-      cursor:pointer;
-    }
-    .btn:hover{
-      transform:translateY(-1px);
-      background:rgba(255,255,255,.08);
-      border-color:rgba(255,255,255,.18);
-    }
-    .btn.primary{
-      border-color:rgba(56,189,248,.35);
       background:linear-gradient(135deg, rgba(56,189,248,.18), rgba(167,139,250,.14));
+      cursor:pointer;
     }
 
     /* HERO */
     .hero{
-      padding:56px 6px 10px;
+      padding:70px 6px 10px;
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:18px;
+      grid-template-columns: 1.1fr .9fr;
+      gap:22px;
       align-items:start;
     }
-    .kicker{
-      display:inline-flex; gap:10px; align-items:center;
-      color:var(--muted);
-      font-size:13px;
-      border:1px solid var(--line);
-      background:rgba(17,24,39,.55);
-      padding:8px 12px;
-      border-radius:999px;
+
+    .hero-logo{
+      width:100%;
+      max-width:420px;
+      margin-bottom:18px;
     }
-    .kicker b{color:var(--text)}
-    h1{font-size:44px; line-height:1.05; margin:14px 0 12px}
-    .lead{color:var(--muted); font-size:16px; line-height:1.6; max-width:62ch}
-    .heroBtns{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+
+    h1{font-size:42px; line-height:1.1; margin:0 0 14px}
+    .lead{color:var(--muted); font-size:16px; line-height:1.6}
+
+    .heroBtns{display:flex; gap:12px; flex-wrap:wrap; margin-top:22px}
 
     .panel{
       border:1px solid var(--line);
       background:var(--panel);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
-      padding:18px;
-    }
-    .headshotRow{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      margin-bottom:12px;
-    }
-    .headshot{
-      width:54px; height:54px;
-      border-radius:999px;
-      object-fit:cover;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-    }
-    .headshotMeta b{display:block; font-size:14px}
-    .headshotMeta span{display:block; color:var(--muted); font-size:12px; margin-top:2px}
-
-    .divider{height:1px; background:var(--line); margin:14px 0}
-    .pill{
-      display:inline-flex; gap:10px; align-items:center;
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      color:var(--muted);
-      font-size:13px;
-      margin-top:18px;
+      padding:20px;
     }
 
-    /* SECTIONS */
-    .section{padding:26px 6px 0}
-    .section h2{font-size:20px; margin:0 0 10px}
-    .section .sub{color:var(--muted); margin:0 0 14px; line-height:1.6}
-    .grid{display:grid; gap:12px}
-    .grid.cols2{grid-template-columns:repeat(2, 1fr)}
+    .section{padding:36px 6px 0}
+    .section h2{font-size:20px; margin-bottom:12px}
+    .grid{display:grid; gap:14px}
+    .grid.cols2{grid-template-columns:repeat(2,1fr)}
     .card{
       border:1px solid var(--line);
       background:var(--card);
       border-radius:16px;
-      padding:16px;
+      padding:18px;
     }
-    .card h3{margin:0 0 6px; font-size:16px}
-    .card p{margin:0; color:var(--muted); line-height:1.55; font-size:14px}
 
-    /* BOOKING */
     #tidycal-embed{
       border:1px solid var(--line);
       border-radius:16px;
       overflow:hidden;
-      background:rgba(255,255,255,.02);
-      min-height: 760px;
+      min-height:760px;
     }
 
-    /* FOOTER */
     .footer{
-      margin-top:40px;
-      padding:20px 6px;
-      color:var(--muted);
+      margin-top:48px;
       font-size:13px;
+      color:var(--muted);
       display:flex;
       justify-content:space-between;
-      gap:10px;
       flex-wrap:wrap;
+      gap:12px;
     }
-    .muted{color:var(--muted)}
-    .small{font-size:12px}
 
-    /* RESPONSIVE */
-    @media (max-width: 920px){
-      .hero{grid-template-columns:1fr; padding-top:34px}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
       .navlinks{display:none}
-      h1{font-size:38px}
-    }
-    @media (max-width: 520px){
-      h1{font-size:34px}
+      h1{font-size:36px}
+      .hero-logo{max-width:300px}
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <!-- NAV -->
-    <div class="nav">
-      <div class="brand">
-        <img class="logo" src="websitelogo.png" alt="Ore Media logo" />
-        <span>Ore Media</span>
-      </div>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="brand">
+      <img src="websitelogo.png" alt="Ore Media logo">
+    </div>
 
-      <div class="navlinks">
-        <a href="#book">Booking</a>
-        <a href="#work">Recent work</a>
-        <a href="#linkedin">LinkedIn</a>
-      </div>
+    <div class="navlinks">
+      <a href="#book">Booking</a>
+      <a href="#work">Recent work</a>
+      <a href="#linkedin">LinkedIn</a>
+    </div>
 
-      <div class="cta">
-        <a class="btn primary" href="https://tidycal.com/oremedia/booking" target="_blank" rel="noopener">Book a CEO call</a>
+    <a class="btn" href="https://tidycal.com/oremedia/booking" target="_blank">
+      Book Recorded Interview
+    </a>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <img class="hero-logo" src="websitelogo.png" alt="Ore Media">
+
+      <h1>Book CEO discussions that retail investors actually watch.</h1>
+      <p class="lead">
+        Ore Media helps junior mining companies tell the story clearly — the asset, the catalyst,
+        and the plan — through clean, recorded CEO interviews designed for investor attention and sharing.
+      </p>
+
+      <div class="heroBtns">
+        <a class="btn" href="#book">Book a discussion</a>
+        <a class="btn" href="#work">View recent work</a>
       </div>
     </div>
 
-    <!-- HERO -->
-    <div class="hero">
-      <div>
-        <span class="kicker"><b>Investor-focused</b> CEO discussions for junior mining</span>
-        <h1>Book CEO discussions that retail investors actually watch.</h1>
-        <p class="lead">
-          Ore Media helps junior mining companies tell the story clearly — the asset, the catalyst, and the plan —
-          through clean, short-form CEO discussions designed for retail attention and sharing.
-        </p>
-
-        <div class="heroBtns">
-          <a class="btn primary" href="#book">Book a discussion</a>
-          <a class="btn" href="#work">View recent work</a>
-        </div>
-
-        <div class="pill">🎙️ CEO discussions <span style="opacity:.5">•</span> 📣 Investor-focused content <span style="opacity:.5">•</span> ⚡ Clean, modern delivery</div>
-      </div>
-
-      <div class="panel">
-        <div class="headshotRow">
-          <img class="headshot" src="Aragon-Headshot-Cooper-Ginn-87.jpg" alt="Cooper Ginn headshot" />
-          <div class="headshotMeta">
-            <b>Cooper Ginn</b>
-            <span>Ore Media • CEO discussions & investor content</span>
-          </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="card" style="background:rgba(255,255,255,.02)">
-          <h3>What we’ll cover</h3>
-          <p>Fast, structured discussion designed to explain the opportunity and near-term catalysts without fluff.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="card" style="background:rgba(255,255,255,.02)">
-          <h3>Format</h3>
-          <p>Zoom / phone / recorded audio — whatever is easiest for management. We keep it tight and investor-readable.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- RECENT WORK -->
-    <div id="work" class="section">
-      <h2>Recent work</h2>
-      <p class="sub">A recent investor presentation example.</p>
-
-      <div class="grid cols2">
-        <div class="card">
-          <h3>Investor Presentation — YouTube</h3>
-          <p class="small muted">Example link:</p>
-          <div style="margin-top:12px">
-            <a class="btn primary" href="https://www.youtube.com/watch?v=SvceQmTNmes" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>CEO Interview Book</h3>
-          <p>Book a 15-minute interview to promote your company to a growing audience of retail investors focused on junior mining.</p>
-          <div style="margin-top:12px">
-            <a class="btn" href="#book">Open booking</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BOOKING -->
-    <div id="book" class="section">
-      <h2>Booking</h2>
-      <p class="sub">Choose a time that suits. The booking page is embedded below.</p>
-
-      <div id="tidycal-embed" data-path="oremedia/booking"></div>
-
-      <div style="margin-top:12px" class="small">
-        <span class="muted">If the embed doesn’t load, use the direct link: </span>
-        <a href="https://tidycal.com/oremedia/booking" target="_blank" rel="noopener" style="text-decoration:underline">tidycal.com/oremedia/booking</a>
-      </div>
-    </div>
-
-    <!-- LINKEDIN -->
-    <div id="linkedin" class="section">
-      <h2>Connect on LinkedIn</h2>
-      <p class="sub">For follow-ups and company discussions.</p>
-
-      <div class="card">
-        <h3>LinkedIn</h3>
-        <p class="muted">View profile and connect.</p>
-        <div style="margin-top:12px">
-          <a class="btn primary" href="https://www.linkedin.com/in/cooper-john-ab98503a0/" target="_blank" rel="noopener">View on LinkedIn</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <div>© <span id="y"></span> Ore Media</div>
-      <div class="muted">CEO discussions • Investor-focused content • Retail distribution</div>
+    <div class="panel">
+      <img src="Aragon-Headshot-Cooper-Ginn-87.jpg" style="width:56px;height:56px;border-radius:50%;margin-bottom:14px">
+      <p style="margin:0;color:var(--muted)">
+        Recorded interviews • Investor-focused • Junior mining specialists
+      </p>
     </div>
   </div>
 
-  <!-- TidyCal embed script -->
-  <script src="https://asset-tidycal.b-cdn.net//js/embed.js" async></script>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <!-- RECENT WORK -->
+  <div id="work" class="section">
+    <h2>Recent work</h2>
+    <div class="grid cols2">
+      <div class="card">
+        <h3>Investor Presentation — YouTube</h3>
+        <a class="btn" href="https://www.youtube.com/watch?v=SvceQmTNmes" target="_blank">Watch on YouTube</a>
+      </div>
+      <div class="card">
+        <h3>Recorded CEO Interview</h3>
+        <p class="lead">15-minute interview promoted to a growing retail mining audience.</p>
+        <a class="btn" href="#book">Open booking</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKING -->
+  <div id="book" class="section">
+    <h2>Booking</h2>
+    <div id="tidycal-embed" data-path="oremedia/booking"></div>
+    <p class="lead">
+      Or book directly:
+      <a href="https://tidycal.com/oremedia/booking" target="_blank">tidycal.com/oremedia/booking</a>
+    </p>
+  </div>
+
+  <!-- LINKEDIN -->
+  <div id="linkedin" class="section">
+    <h2>Connect on LinkedIn</h2>
+    <a class="btn" href="https://www.linkedin.com/in/cooper-john-ab98503a0/" target="_blank">
+      View LinkedIn Profile
+    </a>
+  </div>
+
+  <div class="footer">
+    <div>© <span id="y"></span> Ore Media</div>
+    <div>CEO discussions • Investor-focused content • Retail distribution</div>
+  </div>
+
+</div>
+
+<script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
+<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
